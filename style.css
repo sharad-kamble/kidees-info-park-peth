@@ -418,3 +418,266 @@ Gallary Grid  */
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 18px 40px rgba(2, 132, 199, 0.25);
 }
+
+/* admission badge */
+.admission-badge {
+
+    background: #ffc107;
+    color: #000;
+    font-weight: 700;
+    padding: 15px 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    animation: pulseGlow 1.8s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.6);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(255, 193, 7, 0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile friendly */
+@media(max-width:768px) {
+    .admission-badge {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
+
+
+/* vision mission */
+.flow-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.flow-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-weight: 500;
+}
+
+.flow-connector {
+    width: 50px;
+    height: 12px;
+    border-radius: 6px;
+}
+
+.mission {
+    border: 10px solid #6cc24a;
+}
+
+.vision {
+    border: 10px solid #2bb0c8;
+}
+
+.strategy {
+    border: 10px solid #f6a609;
+}
+
+.goals {
+    border: 10px solid #5867dd;
+}
+
+.con-mission {
+    background: #6cc24a;
+}
+
+.con-vision {
+    background: #2bb0c8;
+}
+
+.con-strategy {
+    background: #f6a609;
+}
+
+@media(max-width:768px) {
+    .flow-connector {
+        display: none;
+    }
+
+    .flow-circle {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* ============================
+   HERO RESPONSIVE FIXES
+============================= */
+
+/* Mobile phones */
+@media (max-width: 576px) {
+
+    .hero-section {
+        padding-top: 110px;
+        /* space for fixed navbar */
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center !important;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-content .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        max-width: 100% !important;
+    }
+
+    .admission-marquee {
+        font-size: 0.85rem;
+        padding: 6px 0;
+    }
+}
+
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    .hero-section {
+        padding-top: 70px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .col-lg-5 {
+        margin-top: 25px;
+    }
+}
+
+
+/* Extra small navbar logo fix */
+@media (max-width: 400px) {
+    .navbar-brand img {
+        height: 38px;
+    }
+}
+
+/* Keep mobile menu left aligned */
+@media (max-width: 992px) {
+
+    .navbar-collapse {
+        text-align: left;
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+    }
+
+    .navbar-nav .nav-link {
+        padding-left: 12px;
+    }
+
+    .dropdown-menu {
+        text-align: left;
+    }
+}
+
+/* Mobile navbar UI improvements */
+@media (max-width: 992px) {
+
+    .navbar-collapse {
+        background: #101524;
+        padding: 15px 18px;
+        border-radius: 0 0 14px 14px;
+    }
+
+    .navbar-nav {
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #ffc107;
+    }
+
+    .dropdown-menu {
+        background: #1a2035;
+        border: none;
+        margin-left: 10px;
+    }
+
+    .dropdown-item {
+        color: #fff;
+    }
+
+    .dropdown-item:hover {
+        background: transparent;
+        color: #ffc107;
+    }
+
+    /* Mobile CTA button */
+    .navbar .btn-warning {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    /* Hamburger spacing */
+    .navbar-toggler {
+        border: none;
+    }
+}
+
+/* form margin botton when in mobile screen  */
+@media (max-width: 767.98px) {
+    .admission-card-wrapper {
+        margin-bottom: 5rem;
+        /* equivalent to mb-5 */
+    }
+}
