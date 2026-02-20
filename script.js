@@ -16,3 +16,5 @@ function changeSlide(step) {
 function closeLightbox() {
     document.getElementById("lightbox").classList.remove("show");
 }
+
+

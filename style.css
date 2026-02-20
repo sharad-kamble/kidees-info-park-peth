@@ -2,12 +2,43 @@ body {
     font-family: "DM Sans", serif;
 }
 
-/* HERO BACKGROUND */
+/* HERO SECTION */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
-        url("./images/MaskGroup.png") center/cover no-repeat;
+    background: url("./images/MaskGroup.png") center/cover no-repeat;
     min-height: 100vh;
-    color: white;
+    padding-top: 100px;
+    /* for fixed navbar */
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+/* IMAGE SIDE */
+.hero-image {
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* MOBILE FIX */
+@media (max-width: 991px) {
+
+    .hero-section {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .hero-image img {
+        object-fit: contain;
+    }
 }
 
 
@@ -680,5 +711,138 @@ Gallary Grid  */
     .admission-card-wrapper {
         margin-bottom: 5rem;
         /* equivalent to mb-5 */
+    }
+}
+
+/* Awards & Achievements */
+.award-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.award-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.award-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* testimonials */
+.testimonial-section {
+    background: linear-gradient(180deg, #f8f9fa, #ffffff);
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* mission ,mission section css*/
+.mission-section {
+    background: linear-gradient(180deg, #ffffff, #f8f9fa);
+}
+
+/* Timeline Layout */
+.timeline-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* Horizontal Line */
+.timeline-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 4px;
+    background: #e9ecef;
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    z-index: 1;
+}
+
+/* Circle Design */
+.timeline-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    padding: 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+}
+
+.timeline-circle:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Different Gradient Themes */
+.mission {
+    background: linear-gradient(135deg, #fff8e1, #ffffff);
+}
+
+.vision {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+}
+
+.strategy {
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+}
+
+.goals {
+    background: linear-gradient(135deg, #fce4ec, #ffffff);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .timeline-wrapper {
+        flex-direction: column;
+    }
+
+    .timeline-wrapper::before {
+        width: 4px;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
