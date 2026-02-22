@@ -1088,3 +1088,135 @@ Gallary Grid  */
         font-size: 26px;
     }
 }
+
+/* Hero Section */
+.admission-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/admission-hero.jpg') center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+/* Premium Card Style */
+.admission-card {
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.admission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Title */
+.section-title {
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.section-title::after {
+    content: '';
+    width: 70px;
+    height: 3px;
+    background: #0d6efd;
+    display: block;
+    margin-top: 8px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #002855, #00509e);
+    color: white;
+}
+
+/* Sidebar */
+.sidebar-wrapper {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-link {
+    display: block;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.sidebar-link:hover {
+    background: #f5e4dc;
+    color: #ff5722;
+}
+
+.sidebar-link.active {
+    background: #f5e4dc;
+    color: #ff5722;
+    font-weight: 600;
+}
+
+/* Main Content */
+.page-title {
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.banner-box {
+    background: #e6d7d1;
+    border-radius: 20px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.banner-text {
+    color: #ff5722;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.apply-btn {
+    background: #2d2f7f;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    border: none;
+}
+
+.apply-btn:hover {
+    background: #1f2160;
+}
+
+/* Content fade animation */
+.content-section {
+    animation: fadeIn .4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width:991px) {
+    .page-title {
+        font-size: 32px;
+    }
+}
