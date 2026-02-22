@@ -846,3 +846,245 @@ Gallary Grid  */
         transform: translateX(-50%);
     }
 }
+
+
+/* About page */
+.about-premium {
+    background: linear-gradient(to right, #f8fbff, #ffffff);
+}
+
+.highlight-box {
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+.highlight-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 20px;
+    left: -30px;
+    max-width: 200px;
+}
+
+@media (max-width: 991px) {
+    .floating-card {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+
+/* vision mission  */
+#vision-mission {
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Time line for principles page */
+
+
+/* Center Vertical Line */
+.timeline-modern::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #0284C7;
+    transform: translateX(-50%);
+}
+
+/* Year Badge */
+.year-badge {
+    display: inline-block;
+    background: #0284C7;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation */
+.animate-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.animate-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Fix */
+@media (max-width: 991px) {
+    .timeline-modern::before {
+        left: 10px;
+    }
+
+    .year-badge {
+        margin-left: 20px;
+    }
+}
+
+/* principles awards */
+.award-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.award-icon {
+    font-size: 40px;
+    color: #0284C7;
+}
+
+.award-year {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 16px;
+    background: #0284C7;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* commitment principles */
+.academic-commitment {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+}
+
+.commitment-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.commitment-text {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.8;
+}
+
+.principal-signature {
+    font-size: 15px;
+    color: #0f172a;
+    border-left: 4px solid #0284C7;
+    padding-left: 15px;
+}
+
+.commitment-highlight {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+}
+
+.commitment-highlight:hover {
+    transform: translateY(-10px);
+}
+
+.quote-icon {
+    font-size: 40px;
+    color: #0284C7;
+}
+
+@media (max-width: 767px) {
+    .commitment-title {
+        font-size: 26px;
+    }
+}
+
+/* parent-testimonials */
+.parent-testimonials {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+}
+
+.testimonial-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.testimonial-subtitle {
+    color: #cbd5e1;
+}
+
+/* Glass Card */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.4s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Avatar */
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #facc15;
+}
+
+/* Stars */
+.stars {
+    color: #facc15;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* Text */
+.testimonial-text {
+    color: #e2e8f0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+@media (max-width: 767px) {
+    .testimonial-title {
+        font-size: 26px;
+    }
+}

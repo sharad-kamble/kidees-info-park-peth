@@ -18,3 +18,20 @@ function closeLightbox() {
 }
 
 
+// Principle page timeline
+
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".animate-item");
+
+    function reveal() {
+        items.forEach(item => {
+            const top = item.getBoundingClientRect().top;
+            if (top < window.innerHeight - 100) {
+                item.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal();
+});
