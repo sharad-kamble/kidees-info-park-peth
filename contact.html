@@ -18,10 +18,175 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Animated Background ===== */
+        .contact-section {
+            background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* ===== Clouds ===== */
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 50px;
+            opacity: 0.6;
+            animation: moveClouds 60s linear infinite;
+        }
+
+        .cloud1 {
+            width: 220px;
+            height: 60px;
+            top: 60px;
+            left: -250px;
+        }
+
+        .cloud2 {
+            width: 160px;
+            height: 50px;
+            top: 140px;
+            left: -200px;
+            animation-duration: 80s;
+        }
+
+        @keyframes moveClouds {
+            from {
+                left: -250px;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        /* ===== Wave Shape ===== */
+        .shape-top {
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        /* ===== Card Styling ===== */
+        .contact-card {
+            border-radius: 25px;
+        }
+
+        /* ===== Premium WhatsApp Wrapper ===== */
+        .whatsapp-wrapper {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999;
+        }
+
+        /* ===== Label Bubble ===== */
+        .whatsapp-label {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.8s ease;
+            white-space: nowrap;
+        }
+
+        /* Slide Animation */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ===== WhatsApp Button ===== */
+        .whatsapp-float {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* Hover Effect */
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Pulse Glow */
+        .whatsapp-float::before {
+            content: "";
+            position: absolute;
+            width: 65px;
+            height: 65px;
+            background: rgba(37, 211, 102, 0.4);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            70% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Hide Label On Small Screens */
+        @media (max-width: 576px) {
+            .whatsapp-label {
+                display: none;
+            }
+        }
+    </style>
 
 </head>
 
@@ -138,8 +303,138 @@
 
 
 
+    <section
+        class="py-5 bg-primary text-center text-warning border-top border-4 border-warning border-bottom border-4 position-relative overflow-hidden">
+        <div class="container fade show">
 
+            <h3 class="fw-bold mb-3 text-uppercase display-6">
+                Admissions Open 2026–27 🎓
+            </h3>
 
+            <p class="mb-4 text-light fs-5">
+                Give your child a joyful and creative learning journey!
+            </p>
+
+            <a href="#" class="btn btn-warning btn-lg rounded-pill px-5 fw-bold shadow-lg">
+                Apply Now
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ================= Contact Section ================= -->
+    <section class="contact-section py-5 position-relative">
+
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+
+        <svg class="shape-top" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="0.4"
+                d="M0,192L60,170.7C120,149,240,107,360,106.7C480,107,600,149,720,165.3C840,181,960,171,1080,149.3C1200,128,1320,96,1380,80L1440,64V0H0Z">
+            </path>
+        </svg>
+
+        <div class="container position-relative">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">Contact Kidees Info Park Peth</h2>
+                <p class="text-muted">We’d love to hear from you 🌈</p>
+            </div>
+
+            <div class="row g-4 align-items-center">
+
+                <!-- Left Side -->
+                <div class="col-lg-5 text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/454/454594.png" class="img-fluid mb-4"
+                        style="max-width:250px;">
+                    <div class="bg-white p-4 shadow rounded-4">
+                        <h5 class="fw-bold">Visit Our Campus</h5>
+                        <p class="mb-1">📍 Info Park, Peth, Pune</p>
+                        <p class="mb-1">📞 +91 98765 43210</p>
+                        <p>✉ info@kideesinfopark.com</p>
+                    </div>
+                </div>
+
+                <!-- Right Side Form -->
+                <div class="col-lg-7">
+                    <div class="card shadow-lg border-0 p-4 contact-card">
+
+                        <h4 class="fw-bold text-center mb-4">Send Us a Message</h4>
+
+                        <form id="contactForm">
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Parent Name"
+                                        required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Child Name"
+                                        required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-lg" placeholder="Email"
+                                        required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control form-control-lg" placeholder="Phone" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <textarea class="form-control form-control-lg" rows="4" placeholder="Your Message"
+                                        required></textarea>
+                                </div>
+
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
+                                        Send Message 🚀
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Google Map -->
+            <div class="container mt-5">
+                <div class="rounded-4 shadow overflow-hidden">
+                    <iframe src="https://www.google.com/maps?q=Info+Park+Peth+Pune&output=embed" width="100%"
+                        height="350" style="border:0;" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- ================= Success Modal ================= -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4 rounded-4 border-0 shadow-lg">
+                <h4 class="fw-bold text-success mb-3">Message Sent Successfully! 🎉</h4>
+                <p>Thank you for contacting Kidees Info Park Peth.<br>We will get back to you soon.</p>
+                <button class="btn btn-primary rounded-pill px-4" data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating -->
+    <!-- Premium WhatsApp Floating Button -->
+    <div class="whatsapp-wrapper">
+        <span class="whatsapp-label">Chat With Us</span>
+        <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
 
 
@@ -220,7 +515,31 @@
     <!-- Orange line -->
     <div class="bg-warning" style="height:4px;"></div>
 
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
 
+            let inputs = this.querySelectorAll("input, textarea");
+            let valid = true;
+
+            inputs.forEach(input => {
+                if (input.value.trim() === "") {
+                    input.classList.add("is-invalid");
+                    valid = false;
+                } else {
+                    input.classList.remove("is-invalid");
+                    input.classList.add("is-valid");
+                }
+            });
+
+            if (valid) {
+                let modal = new bootstrap.Modal(document.getElementById("successModal"));
+                modal.show();
+                this.reset();
+                inputs.forEach(i => i.classList.remove("is-valid"));
+            }
+        });
+    </script>
 
 
     <script src="script.js"></script>

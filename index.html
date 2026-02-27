@@ -22,6 +22,22 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 
 </head>
 
@@ -170,9 +186,11 @@
                 </div>
 
                 <!-- RIGHT IMAGE -->
-                <div class="col-lg-6 col-12 hero-image p-0">
-                    <img src="images/school-boys.png" class="img-fluid w-100 h-100"
+                <div class="col-lg-6 col-12 hero-image p-0 overflow-hidden">
+
+                    <img src="images/school-boys.png" class="img-fluid w-100 h-100 object-fit-cover"
                         alt="Students of Kidees Info Park Peth CBSE School in Latur participating in learning activities">
+
                 </div>
 
             </div>
@@ -555,6 +573,59 @@
             </div>
         </div>
     </section>
+    <!-- Our Facilities Section Start -->
+    <section class="py-5 bg-light" id="facilities">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Our Facilities</h2>
+                <p class="text-muted">Creating a Safe, Smart and Joyful Learning Environment for Every Child</p>
+            </div>
+
+            <div class="row align-items-center">
+
+                <!-- LEFT SIDE CONTENT -->
+
+                <div class="col-lg-6 mb-4 mb-lg-0">
+
+
+                    <ul class="list-unstyled fs-5 facility-list">
+                        <li>• AV Room</li>
+                        <li>• KIP Lab</li>
+                        <li>• Science Labs</li>
+                        <li>• Sports & Recreation Area</li>
+                        <li>• Music Room</li>
+                        <li>• Art Room</li>
+                        <li>• Library</li>
+                        <li>• Computer Lab</li>
+                        <li>• WiFi Projectors & Modern Technologies</li>
+                        <li>• Best Quality Education Environment</li>
+                    </ul>
+
+                    <p class="text-muted mt-4">
+                        At <strong>Kidees Info Park Peth</strong>, we provide a safe, engaging, and
+                        technology-enabled learning environment where children grow academically,
+                        socially, and creatively.
+                    </p>
+                </div>
+
+                <!-- RIGHT SIDE IMAGES -->
+                <div class="col-lg-6 text-center position-relative">
+
+                    <!-- Top Circle Image -->
+                    <div class="facility-img facility-img-top shadow">
+                        <img src="images/facilities1.jpeg" class="img-fluid" alt="Play Area">
+                    </div>
+
+                    <!-- Bottom Circle Image -->
+                    <div class="facility-img facility-img-bottom shadow">
+                        <img src="images/facilities2.jpeg" class="img-fluid" alt="Campus">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Facilities Section End -->
     <section class="py-5 bg-light">
         <div class="container">
 
@@ -692,61 +763,82 @@
         </div>
     </section>
 
+    <!-- Our Gallery Section Start -->
+    <section class="py-5 bg-white" id="gallery">
+        <div class="container">
 
-    <div class="container py-5 text-center">
-
-        <h3 class="fw-bold">Our Gallery</h3>
-        <p class="text-warning fw-semibold">Moments at Kidees Info Park</p>
-        <p class="text-muted small mb-4">
-            A glimpse of our classrooms, workshops, and student activities.
-        </p>
-
-        <div class="gallery-grid">
-
-            <!-- Classroom Album -->
-            <div class="gallery-item" onclick="openGroup([
-        'images/gallery/classroom/class1.jpg',
-        'images/gallery/classroom/class2.jpg',
-        'images/gallery/classroom/class3.jpg'
-    ])">
-                <img src="images/gallery/classroom/class1.jpg" loading="lazy" alt="Classroom Activities">
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Gallery</h2>
+                <p class="text-muted">Capturing joyful learning moments and creative experiences</p>
             </div>
 
-            <!-- Events Album -->
-            <div class="gallery-item" onclick="openGroup([
-        'images/gallery/events/event1.jpg',
-        'images/gallery/events/event2.jpg',
-        'images/gallery/events/event3.jpg'
-    ])">
-                <img src="images/gallery/events/event1.jpg" loading="lazy" alt="School Events">
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 gallery-card">
+                        <img src="images/smart-classroom.jpeg" class="card-img-top" alt="Smart Classroom">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Smart Classroom</h5>
+                            <p class="text-muted small">
+                                Interactive digital learning sessions with modern teaching tools.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 gallery-card">
+                        <img src="images/play-area.jpeg" class="card-img-top" alt="Play Area">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Play & Activity Area</h5>
+                            <p class="text-muted small">
+                                Safe and colorful environment for fun, fitness and social growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 gallery-card">
+                        <img src="images/art-creativity.jpeg" class="card-img-top" alt="Art & Craft">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Art & Creativity</h5>
+                            <p class="text-muted small">
+                                Encouraging imagination through drawing, painting and craft activities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 gallery-card">
+                        <img src="images/school-event.jpeg" class="card-img-top" alt="School Events">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">School Events</h5>
+                            <p class="text-muted small">
+                                Celebrating festivals, competitions and special occasions with joy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Workshops Album -->
-            <div class="gallery-item" onclick="openGroup([
-        'images/gallery/workshops/work1.jpg',
-        'images/gallery/workshops/work2.jpg',
-        'images/gallery/workshops/work3.jpg'
-    ])">
-                <img src="images/gallery/workshops/work1.jpg" loading="lazy" alt="Student Workshops">
+            <!-- Explore More Button -->
+            <div class="text-center mt-5">
+                <a href="gallery.html" class="btn btn-warning px-4 py-2 fw-semibold rounded-pill shadow-sm explore-btn">
+                    Explore More
+                </a>
             </div>
 
-            <!-- More albums same pattern -->
         </div>
-
-    </div>
-
-    <!-- Lightbox Carousel -->
-    <div class="lightbox" id="lightbox">
-        <span class="nav prev" onclick="changeSlide(-1)">❮</span>
-        <img id="lightboxImg">
-        <span class="nav next" onclick="changeSlide(1)">❯</span>
-        <span class="close-btn" onclick="closeLightbox()">×</span>
-    </div>
-
-
-
-
-
+    </section>
+    <!-- Our Gallery Section End -->
 
     <div class="container py-5">
 
@@ -881,139 +973,7 @@
         </div>
     </section>
 
-    <section class="testimonial-section py-5">
-        <div class="container">
 
-            <!-- Heading -->
-            <div class="text-center mb-5">
-                <h2 class="fw-bold display-6">What Parents & Students Say</h2>
-                <p class="text-warning fw-semibold">Trusted Learning Experience</p>
-                <p class="text-muted small">
-                    Real feedback from families who grow with us.
-                </p>
-            </div>
-
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-
-                <!-- Indicators -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0"
-                        class="active"></button>
-                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-                </div>
-
-                <div class="carousel-inner">
-
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <div class="row g-4 justify-content-center">
-
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <div class="testimonial-card h-100 text-center">
-                                    <img src="https://i.pravatar.cc/100?img=15" class="rounded-circle mb-3"
-                                        alt="Parent">
-                                    <div class="stars mb-2">★★★★★</div>
-                                    <p class="text-muted small">
-                                        My child has become confident in computers and studies.
-                                        Teachers are very caring.
-                                    </p>
-                                    <h6 class="fw-bold mb-0">Mrs. Patil</h6>
-                                    <small class="text-muted">Parent</small>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
-                                <div class="testimonial-card h-100 text-center">
-                                    <img src="https://i.pravatar.cc/100?img=28" class="rounded-circle mb-3"
-                                        alt="Parent">
-                                    <div class="stars mb-2">★★★★★</div>
-                                    <p class="text-muted small">
-                                        Excellent practical learning approach.
-                                        My son enjoys every class.
-                                    </p>
-                                    <h6 class="fw-bold mb-0">Mr. Deshmukh</h6>
-                                    <small class="text-muted">Parent</small>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 d-none d-lg-block">
-                                <div class="testimonial-card h-100 text-center">
-                                    <img src="https://i.pravatar.cc/100?img=40" class="rounded-circle mb-3"
-                                        alt="Parent">
-                                    <div class="stars mb-2">★★★★★</div>
-                                    <p class="text-muted small">
-                                        Friendly environment with modern teaching methods.
-                                    </p>
-                                    <h6 class="fw-bold mb-0">Mrs. Kulkarni</h6>
-                                    <small class="text-muted">Parent</small>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <div class="row g-4 justify-content-center">
-
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <div class="testimonial-card h-100 text-center">
-                                    <img src="https://i.pravatar.cc/100?img=52" class="rounded-circle mb-3"
-                                        alt="Parent">
-                                    <div class="stars mb-2">★★★★★</div>
-                                    <p class="text-muted small">
-                                        My daughter learned coding basics very quickly.
-                                    </p>
-                                    <h6 class="fw-bold mb-0">Mrs. Shinde</h6>
-                                    <small class="text-muted">Parent</small>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
-                                <div class="testimonial-card h-100 text-center">
-                                    <img src="https://i.pravatar.cc/100?img=60" class="rounded-circle mb-3"
-                                        alt="Parent">
-                                    <div class="stars mb-2">★★★★★</div>
-                                    <p class="text-muted small">
-                                        Great teachers and excellent support system.
-                                    </p>
-                                    <h6 class="fw-bold mb-0">Mr. Pawar</h6>
-                                    <small class="text-muted">Parent</small>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 d-none d-lg-block">
-                                <div class="testimonial-card h-100 text-center">
-                                    <img src="https://i.pravatar.cc/100?img=64" class="rounded-circle mb-3"
-                                        alt="Parent">
-                                    <div class="stars mb-2">★★★★★</div>
-                                    <p class="text-muted small">
-                                        The best learning environment for young students.
-                                    </p>
-                                    <h6 class="fw-bold mb-0">Mrs. Jadhav</h6>
-                                    <small class="text-muted">Parent</small>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
-                </button>
-
-            </div>
-        </div>
-    </section>
 
 
 
