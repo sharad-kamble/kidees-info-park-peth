@@ -4,26 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kidees Info Park Peth | Where Tender Buds Bloom</title>
 
+    <!-- Primary SEO -->
+    <title>Contact Us | Kidees Info Park Peth | CBSE School in Latur</title>
+    <meta name="description"
+        content="Get in touch with Kidees Info Park Peth, a leading CBSE English Medium School in Latur. Find our address, phone number, email and admission enquiry details. Schedule a school visit today.">
+    <meta name="keywords"
+        content="Contact Kidees Info Park Peth, CBSE School in Latur Contact Number, School Address in Peth, Admission Enquiry Latur School, Best School Contact Details">
+    <meta name="author" content="Kidees Info Park Peth">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL (Replace with real domain) -->
+    <link rel="canonical" href="https://yourdomain.com/contact.html">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
 
-    <!-- Bootstrap -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us | Kidees Info Park Peth">
+    <meta property="og:description"
+        content="Connect with Kidees Info Park Peth in Latur for admissions, enquiries and school visit scheduling. We are here to assist you.">
+    <meta property="og:image" content="https://yourdomain.com/images/contact-og.jpg">
+    <meta property="og:url" content="https://yourdomain.com/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kidees Info Park Peth">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Kidees Info Park Peth">
+    <meta name="twitter:description"
+        content="Reach out to our school for admissions, queries and campus visits in Latur.">
+    <meta name="twitter:image" content="https://yourdomain.com/images/contact-og.jpg">
+
+    <!-- Bootstrap (Keep Only One Version) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome (Keep Only One Version) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap Icons CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Your Existing Page Styles -->
     <style>
         /* ===== Animated Background ===== */
         .contact-section {
@@ -82,19 +110,12 @@
             }
         }
 
-        /* ===== Wave Shape ===== */
-        .shape-top {
-            position: absolute;
-            top: 0;
-            width: 100%;
-        }
-
         /* ===== Card Styling ===== */
         .contact-card {
             border-radius: 25px;
         }
 
-        /* ===== Premium WhatsApp Wrapper ===== */
+        /* ===== WhatsApp Floating Button ===== */
         .whatsapp-wrapper {
             position: fixed;
             bottom: 25px;
@@ -105,7 +126,6 @@
             z-index: 9999;
         }
 
-        /* ===== Label Bubble ===== */
         .whatsapp-label {
             background: white;
             padding: 8px 15px;
@@ -117,7 +137,6 @@
             white-space: nowrap;
         }
 
-        /* Slide Animation */
         @keyframes slideIn {
             from {
                 opacity: 0;
@@ -130,7 +149,6 @@
             }
         }
 
-        /* ===== WhatsApp Button ===== */
         .whatsapp-float {
             width: 65px;
             height: 65px;
@@ -146,13 +164,11 @@
             position: relative;
         }
 
-        /* Hover Effect */
         .whatsapp-float:hover {
             transform: scale(1.15);
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
         }
 
-        /* Pulse Glow */
         .whatsapp-float::before {
             content: "";
             position: absolute;
@@ -180,14 +196,12 @@
             }
         }
 
-        /* Hide Label On Small Screens */
         @media (max-width: 576px) {
             .whatsapp-label {
                 display: none;
             }
         }
     </style>
-
 </head>
 
 <body>
@@ -198,11 +212,11 @@
 
             <div class="container">
 
-                <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-white" href="#">
+                <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-white" href="./index.html">
                     <img src="./images/kideesinfoparkpeth.png" alt="School Logo" height="45">
 
                     <div class="d-flex flex-column lh-sm">
-                        <span>Kidees Info Park Peth</span>
+                        <span>Kidees Info Park</span>
                         <small class="fw-normal fst-italic text-warning opacity-75">
                             Where tender buds bloom
                         </small>
@@ -231,10 +245,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./principals-message.html">Principal’s Message</a>
+                            <a class="nav-link" href="./principal-desk.html">Principal Desk</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./academics.html">Academics</a>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                                 Academics
                             </a>
@@ -243,18 +260,18 @@
                                 <li><a class="dropdown-item" href="#">Primary</a></li>
                                 <li><a class="dropdown-item" href="#">Secondary</a></li>
                             </ul>
+                        </li> -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./admission.html">Admission</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Admissions Open</a>
+                            <a class="nav-link" href="./gallery.html">Gallery</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Gallery</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Faculty</a>
+                            <a class="nav-link" href="./faculty.html">Faculty</a>
                         </li>
 
                         <!-- <li class="nav-item">
@@ -262,9 +279,12 @@
                         </li> -->
 
                     </ul>
+                    <a href="./admission.html" class="btn btn-danger ms-lg-3 mt-2 mt-lg-0 ">
+                        Admission Open
+                    </a>
 
                     <!-- Contact Button -->
-                    <a href="#contact" class="btn btn-warning ms-lg-3 mt-2 mt-lg-0 ">
+                    <a href="./contact.html" class="btn btn-warning ms-lg-3 mt-2 mt-lg-0 ">
                         Contact Us
                     </a>
 
@@ -387,7 +407,7 @@
     <section class="container-fluid p-0 m-0 py-5">
         <div class="row justify-content-center g-0">
             <div class="col-12">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3633.8881424724314!2d73.74562809999999!3d18.591735699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbf65d478e3b%3A0xbc5039aea6f914a2!2sApex%20IT%20Solution!5e1!3m2!1sen!2sin!4v1742979829280!5m2!1sen!2sin
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970536.0775298208!2d74.62646906680503!3d18.156700776558527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf821d12f123ab%3A0x19b1a690c028f5c4!2sKidees%20Info%20Park%20Peth!5e0!3m2!1sen!2sin!4v1772376076210!5m2!1sen!2sin
                 " class="w-100" frameborder="0" allowfullscreen="" title="Map" style="border: 0; height: 50vh;"
                     spellcheck="false">
                 </iframe>
@@ -398,6 +418,14 @@
 
 
 
+
+    <!-- Premium WhatsApp Floating Button -->
+    <div class="whatsapp-wrapper">
+        <span class="whatsapp-label">Chat With Us</span>
+        <a href="https://wa.me/919325321272" target="_blank" class="whatsapp-float">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
     <!-- Footer -->
     <footer class="bg-dark text-light pt-5">
         <div class="container">
@@ -411,18 +439,24 @@
                         <span class="fw-bold ms-2 fs-4">Kidees Info Park</span>
                     </div>
                     <p class="fs-6">
-                        Dedicated to providing quality computer education and skill development programs for
-                        students
+                        Dedicated to providing quality computer education and skill development programs for students
                         and professionals.
                     </p>
                     <p class="mb-1 fs-6">
                         <strong>Address:</strong> Ausa Rd, Peth, Maharashtra 413531
                     </p>
                     <p class="mb-1 fs-6">
-                        <strong>Phone:</strong> 093253 21272
+                        <strong>Phone:</strong>
+                        <a href="tel:+919325321272" class="text-light text-decoration-none">
+                            093253 21272
+                        </a>
                     </p>
+
                     <p class="mb-2 fs-6">
-                        <strong>Email:</strong> info@kideesinfopark.com
+                        <strong>Email:</strong>
+                        <a href="mailto:info@kideesinfopark.com" class="text-light text-decoration-none">
+                            info@kideesinfopark.com
+                        </a>
                     </p>
 
                 </div>
@@ -431,10 +465,11 @@
                 <div class="col-6 col-md-2 mb-4 text-center text-md-start">
                     <h6 class="fw-bold fs-5">Explore</h6>
                     <ul class="list-unstyled fs-6">
-                        <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Programs</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">News & Events</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Gallery</a></li>
+                        <li><a href="./about-us.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="./faculty.html" class="text-light text-decoration-none">Faculty</a></li>
+                        <li><a href="./principal-desk.html" class="text-light text-decoration-none">Principal Desk</a>
+                        </li>
+                        <li><a href="./gallery.html" class="text-light text-decoration-none">Gallery</a></li>
                     </ul>
                 </div>
 
@@ -442,10 +477,10 @@
                     <h6 class="fw-bold fs-5">Quick Links</h6>
                     <ul class="list-unstyled fs-6">
                         <li><a href="#" class="text-light text-decoration-none">Faculty</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Admissions</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Guidelines</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Location</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="./admission.html" class="text-light text-decoration-none">Admissions</a></li>
+                        <li><a href="./academics.html" class="text-light text-decoration-none">Academics</a></li>
+                        <li><a href="./admission.html" class="text-light text-decoration-none">Admission Open</a></li>
+                        <li><a href="./contact.html" class="text-light text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
 
@@ -453,24 +488,32 @@
                 <div class="col-12 col-md-3 mb-4 text-center text-md-start">
                     <h6 class="fw-bold fs-5">Connect With Us</h6>
                     <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-2 fs-5">
-                        <a href="https://twitter.com/kideesinfopark" target="_blank" class="text-light"><i
+                        <a href="https://x.com/kideesinfopark" target="_blank" class="text-light"><i
                                 class="bi bi-twitter"></i></a>
-                        <a href="https://facebook.com/kideesinfopark" target="_blank" class="text-light"><i
+                        <a href="https://www.facebook.com/kideesinfopark/" target="_blank" class="text-light"><i
                                 class="bi bi-facebook"></i></a>
-                        <a href="https://instagram.com/kideesinfopark" target="_blank" class="text-light"><i
+                        <a href="https://www.instagram.com/kideesinfopark" target="_blank" class="text-light"><i
                                 class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/@kideesinfoparklatur9952" target="_blank" class="text-light">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@kideesinfoparklatur9952" target="_blank"
+                            rel="noopener noreferrer" class="text-light">
+                            <i class="bi bi-youtube"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <!-- Bottom -->
             <div class="text-center border-top border-secondary py-3 mt-3 fs-6">
+                <p class="mb-1">
+                    🏫 CBSE Affiliation No: 1130821
+                </p>
                 &copy; 2026 Kidees Info Park Peth. All Rights Reserved.
             </div>
-
         </div>
     </footer>
-
     <!-- Orange line -->
     <div class="bg-warning" style="height:4px;"></div>
 
