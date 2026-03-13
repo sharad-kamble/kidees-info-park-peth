@@ -54,12 +54,9 @@
     <!-- ===== CUSTOM CSS FILE ===== -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- ===== PAGE SPECIFIC INTERNAL CSS ===== -->
-    <style>
-
-    </style>
-
 </head>
+
+
 
 <body>
 
@@ -376,48 +373,55 @@
                             Online Admission Enquiry Form
                         </h3>
 
-                        <form>
+                        <form action="admission-inquiry.php" method="POST">
 
-                            <div class="mb-3">
-                                <label class="form-label small fw-semibold">Parent Name</label>
-                                <input type="text" class="form-control" placeholder="Enter Parent Name" required>
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label for="parentName" class="form-label">Parent Name</label>
+                                    <input type="text" class="form-control" id="parentName" name="parentName"
+                                        placeholder="Enter Parent Name" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="mobileNumber" class="form-label">Mobile Number</label>
+                                    <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber"
+                                        placeholder="Enter Mobile Number" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="emailAddress" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="emailAddress" name="emailAddress"
+                                        placeholder="Enter Email Address" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="classSelect" class="form-label">Select Class</label>
+                                    <select class="form-select" id="classSelect" name="classSelect" required>
+                                        <option value="" selected disabled>Choose Class</option>
+                                        <option value="Pre-Primary">Pre-Primary</option>
+                                        <option value="Primary">Primary</option>
+                                        <option value="Secondary">Secondary</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4"
+                                        placeholder="Write your enquiry here..." required></textarea>
+                                </div>
+
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label small fw-semibold">Mobile Number</label>
-                                <input type="tel" class="form-control" placeholder="Enter Mobile Number" required>
+                            <div class="mt-4">
+                                <input type="submit" class="btn btn-warning" value="Submit Admission Enquiry">
+                                <a href="./view-admission-enquiry.php" class="btn btn-secondary">View Enquiries</a>
                             </div>
-
-                            <div class="mb-3">
-                                <label class="form-label small fw-semibold">Email Address</label>
-                                <input type="email" class="form-control" placeholder="Enter Email Address">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label small fw-semibold">Select Class</label>
-                                <select class="form-select">
-                                    <option selected disabled>Choose Class</option>
-                                    <option>Pre-Primary</option>
-                                    <option>Primary</option>
-                                    <option>Secondary</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label small fw-semibold">Message</label>
-                                <textarea class="form-control" rows="3"
-                                    placeholder="Write your enquiry here"></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-warning w-100 fw-semibold">
-                                Submit Admission Enquiry
-                            </button>
 
                         </form>
 
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -453,8 +457,10 @@
                 <div class="col-lg-6">
 
                     <!-- NEWS 1 -->
+                    <!-- Video Article -->
                     <article class="d-flex gap-3 mb-4 bg-white p-3 rounded-4 shadow-sm" data-bs-toggle="modal"
-                        data-bs-target="#videoModal" data-video="https://www.youtube.com/embed/ysz5S6PUM-U">
+                        data-bs-target="#videoModal"
+                        data-video="https://www.youtube.com/embed/8w13jTEmL40?si=ACWfAmwuu5KCvdoR">
 
                         <img src="https://picsum.photos/300/200?1" class="img-fluid rounded news-img">
 
@@ -465,8 +471,8 @@
                             </p>
                             <small class="text-secondary">▶ Watch Video</small>
                         </div>
-
                     </article>
+
 
                     <!-- NEWS 2 -->
                     <article class="d-flex gap-3 mb-4 bg-white p-3 rounded-4 shadow-sm" data-bs-toggle="modal"
@@ -649,10 +655,10 @@
             <div id="awardSlider" class="carousel slide" data-bs-ride="carousel">
 
                 <!-- Indicators -->
-                <div class="carousel-indicators">
+                <!-- <div class="carousel-indicators">
                     <button type="button" data-bs-target="#awardSlider" data-bs-slide-to="0" class="active"></button>
                     <button type="button" data-bs-target="#awardSlider" data-bs-slide-to="1"></button>
-                </div>
+                </div> -->
 
                 <div class="carousel-inner">
 
@@ -1096,20 +1102,62 @@
 
     <!-- VIDEO SCRIPT -->
     <script>
-        const videoModal = document.getElementById('videoModal');
-        const videoFrame = document.getElementById('videoFrame');
+    const videoModal = document.getElementById('videoModal');
+    const videoFrame = document.getElementById('videoFrame');
 
-        videoModal.addEventListener('show.bs.modal', function (event) {
-            const card = event.relatedTarget;
-            const videoURL = card.getAttribute('data-video');
-            videoFrame.src = videoURL + "?autoplay=1";
-        });
+    videoModal.addEventListener('show.bs.modal', function(event) {
+        const card = event.relatedTarget;
+        const videoURL = card.getAttribute('data-video');
+        videoFrame.src = videoURL + "?autoplay=1";
+    });
 
-        videoModal.addEventListener('hidden.bs.modal', function () {
-            videoFrame.src = "";
-        });
+    videoModal.addEventListener('hidden.bs.modal', function() {
+        videoFrame.src = "";
+    });
     </script>
+    <script>
+    function validateAdmissionForm() {
+        const parentName = document.getElementById('parentName').value.trim();
+        const mobile = document.getElementById('mobileNumber').value.trim();
+        const email = document.getElementById('emailAddress').value.trim();
+        const classSelect = document.getElementById('classSelect').value;
+        const message = document.getElementById('message').value.trim();
 
+        // Parent Name Validation
+        if (parentName.length < 3) {
+            alert("Parent Name must be at least 3 characters.");
+            return false;
+        }
+
+        // Mobile Validation (10 digits)
+        const mobilePattern = /^(\+91)?[0-9]{10}$/;
+        if (!mobilePattern.test(mobile)) {
+            alert("Enter a valid 10-digit mobile number.");
+            return false;
+        }
+
+        // Email Validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("Enter a valid email address.");
+            return false;
+        }
+
+        // Class Validation
+        if (classSelect === "") {
+            alert("Please select a class.");
+            return false;
+        }
+
+        // Message Validation
+        if (message.length < 5) {
+            alert("Message should be at least 5 characters long.");
+            return false;
+        }
+
+        return true; // All validations passed
+    }
+    </script>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
