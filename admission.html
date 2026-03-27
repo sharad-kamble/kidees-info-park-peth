@@ -50,6 +50,200 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(to bottom, #f0f9ff, #f8fafc);
+            color: #1e293b;
+        }
+
+        .container.my-5 {
+            max-width: 1200px;
+        }
+
+        /* Header Section */
+        .text-center.mb-5 {
+            background: linear-gradient(135deg, #0284C7, #0ea5e9);
+            padding: 45px 25px;
+            border-radius: 28px;
+            box-shadow: 0 20px 50px rgba(2, 132, 199, 0.15);
+            color: #fff;
+            margin-bottom: 40px !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text-center.mb-5::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            top: -50px;
+            right: -40px;
+        }
+
+        .text-center.mb-5::after {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            bottom: -30px;
+            left: -30px;
+        }
+
+        .text-center.mb-5 h2 {
+            color: #fff !important;
+            font-size: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-center.mb-5 p {
+            color: rgba(255, 255, 255, 0.9) !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-center.mb-5 img {
+            background: #fff;
+            padding: 10px 18px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Form */
+        form {
+            background: #fff;
+            padding: 35px;
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+        }
+
+        /* Cards */
+        .card {
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 22px !important;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08) !important;
+        }
+
+        .card-body {
+            padding: 30px !important;
+        }
+
+        .card h5 {
+            font-size: 1.2rem;
+            color: #0284C7;
+            font-weight: 700 !important;
+            border-left: 5px solid #0284C7;
+            padding-left: 12px;
+            margin-bottom: 24px !important;
+        }
+
+        /* Labels */
+        .form-label {
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+        /* Inputs */
+        .form-control,
+        .form-select,
+        textarea {
+            min-height: 50px;
+            border-radius: 14px !important;
+            border: 1px solid #cbd5e1 !important;
+            padding: 12px 15px !important;
+            font-size: 15px;
+            box-shadow: none !important;
+            transition: all 0.25s ease;
+        }
+
+        textarea.form-control {
+            min-height: auto;
+        }
+
+        .form-control:focus,
+        .form-select:focus,
+        textarea:focus {
+            border-color: #0284C7 !important;
+            box-shadow: 0 0 0 0.18rem rgba(2, 132, 199, 0.12) !important;
+        }
+
+        .form-control::placeholder,
+        textarea::placeholder {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* Submit Button */
+        .btn.btn-primary {
+            background: linear-gradient(90deg, #0284C7, #0ea5e9);
+            border: none;
+            padding: 14px 38px !important;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 50px;
+            box-shadow: 0 10px 24px rgba(2, 132, 199, 0.22);
+            transition: all 0.3s ease;
+        }
+
+        .btn.btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(2, 132, 199, 0.28);
+        }
+
+        /* Textareas */
+        textarea.form-control {
+            border-radius: 16px !important;
+            resize: none;
+        }
+
+        /* Better spacing */
+        .row.g-4 {
+            --bs-gutter-y: 1.5rem;
+            --bs-gutter-x: 1.5rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .text-center.mb-5 {
+                padding: 30px 20px;
+                border-radius: 22px;
+            }
+
+            .text-center.mb-5 h2 {
+                font-size: 1.6rem;
+            }
+
+            form {
+                padding: 20px;
+                border-radius: 20px;
+            }
+
+            .card-body {
+                padding: 22px !important;
+            }
+
+            .btn.btn-primary {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -354,10 +548,10 @@
 
         </div>
 
-        <form>
+        <form action="save_admission.php" method="POST" enctype="multipart/form-data">
 
             <!-- ================= Student Information ================= -->
-            <div class="card shadow-sm border p-4  rounded-3 mb-4">
+            <div class="card shadow-sm border rounded-3 mb-4">
                 <div class="card-body p-4">
 
                     <h5 class="fw-bold mb-4">Student Information</h5>
@@ -365,27 +559,27 @@
                     <div class="row g-4">
 
                         <div class="col-md-6">
-                            <label class="form-label">Student Full Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Enter Student Name">
+                            <label class="form-label">Student Full Name</label>
+                            <input type="text" name="student_name" class="form-control" placeholder="Enter full name">
                         </div>
 
                         <div class="col-md-3">
-                            <label class="form-label">Gender <span class="text-danger">*</span></label>
-                            <select class="form-select">
-                                <option selected disabled>Select</option>
+                            <label class="form-label">Gender</label>
+                            <select class="form-select" name="gender">
+                                <option selected disabled>Select Gender</option>
                                 <option>Male</option>
                                 <option>Female</option>
                             </select>
                         </div>
 
                         <div class="col-md-3">
-                            <label class="form-label">Date of Birth <span class="text-danger">*</span></label>
-                            <input type="date" class="form-control">
+                            <label class="form-label">Date of Birth</label>
+                            <input type="date" name="dob" class="form-control">
                         </div>
 
                         <div class="col-md-4">
-                            <label class="form-label">Class Applying For <span class="text-danger">*</span></label>
-                            <select class="form-select">
+                            <label class="form-label">Class Applying For</label>
+                            <select class="form-select" name="class_applying">
                                 <option selected disabled>Select Class</option>
                                 <option>5th Standard</option>
                                 <option>6th Standard</option>
@@ -396,104 +590,237 @@
                             </select>
                         </div>
 
-                        <div class="col-md-4">
-                            <label class="form-label">Student Photo</label>
-                            <input type="file" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= Personal Details ================= -->
+            <div class="card shadow-sm border rounded-3 mb-4">
+                <div class="card-body p-4">
+
+                    <h5 class="fw-bold mb-4">Personal Details</h5>
+
+                    <div class="row g-4">
+
+                        <div class="col-md-3">
+                            <label class="form-label">Nationality</label>
+                            <input type="text" name="nationality" class="form-control" placeholder="Enter nationality">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Religion</label>
+                            <input type="text" name="religion" class="form-control" placeholder="Enter religion">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Mother Tongue</label>
+                            <input type="text" name="mother_tongue" class="form-control"
+                                placeholder="Enter mother tongue">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Blood Group</label>
+                            <input type="text" name="blood_group" class="form-control" placeholder="e.g. A+, O-">
                         </div>
 
                         <div class="col-md-4">
-                            <label class="form-label">Birth Certificate</label>
-                            <input type="file" class="form-control">
+                            <label class="form-label">Caste</label>
+                            <input type="text" name="caste" class="form-control" placeholder="Enter caste">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Sub-caste</label>
+                            <input type="text" name="sub_caste" class="form-control" placeholder="Enter sub-caste">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Category</label>
+                            <input type="text" name="category" class="form-control"
+                                placeholder="e.g. General, OBC, SC, ST">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Place of Birth</label>
+                            <input type="text" name="place_of_birth" class="form-control"
+                                placeholder="Enter place of birth">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Aadhaar Number</label>
+                            <input type="text" name="aadhar" class="form-control" placeholder="Enter Aadhaar number">
                         </div>
 
                     </div>
                 </div>
             </div>
 
-
-            <!-- ================= Parent Information ================= -->
-            <div class="card shadow-sm border p-4  rounded-3 mb-4">
+            <!-- ================= Admission Details ================= -->
+            <div class="card shadow-sm border rounded-3 mb-4">
                 <div class="card-body p-4">
 
-                    <h5 class="fw-bold mb-4">Parent / Guardian Information</h5>
+                    <h5 class="fw-bold mb-4">Admission Details</h5>
+
+                    <div class="row g-4">
+
+                        <div class="col-md-6">
+                            <label class="form-label">Last School Attended</label>
+                            <input type="text" name="last_school" class="form-control" placeholder="Enter school name">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Last Exam Taken</label>
+                            <input type="text" name="last_exam" class="form-control" placeholder="Enter exam name">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Year of Passing</label>
+                            <input type="text" name="year" class="form-control" placeholder="Enter year">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Age</label>
+                            <input type="text" name="age" class="form-control" placeholder="Enter age">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Admission for Class</label>
+                            <input type="text" name="admission_class" class="form-control" placeholder="Enter class">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Date of Admission</label>
+                            <input type="date" name="admission_date" class="form-control">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= Father Details ================= -->
+            <div class="card shadow-sm border rounded-3 mb-4">
+                <div class="card-body p-4">
+
+                    <h5 class="fw-bold mb-4">Father's Details</h5>
 
                     <div class="row g-4">
 
                         <div class="col-md-4">
-                            <label class="form-label">Father's Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control">
+                            <label class="form-label">Father's Name</label>
+                            <input type="text" name="father_name" class="form-control"
+                                placeholder="Enter father's name">
                         </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="text" name="father_mobile" class="form-control"
+                                placeholder="Enter mobile number">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Occupation</label>
+                            <input type="text" name="father_occupation" class="form-control"
+                                placeholder="Enter occupation">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Annual Income</label>
+                            <input type="text" name="father_income" class="form-control"
+                                placeholder="Enter annual income">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">PAN Number</label>
+                            <input type="text" name="father_pan" class="form-control" placeholder="Enter PAN number">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Aadhaar Number</label>
+                            <input type="text" name="father_aadhar" class="form-control"
+                                placeholder="Enter Aadhaar number">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= Mother Details ================= -->
+            <div class="card shadow-sm border rounded-3 mb-4">
+                <div class="card-body p-4">
+
+                    <h5 class="fw-bold mb-4">Mother's Details</h5>
+
+                    <div class="row g-4">
 
                         <div class="col-md-4">
                             <label class="form-label">Mother's Name</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="mother_name" class="form-control"
+                                placeholder="Enter mother's name">
                         </div>
 
                         <div class="col-md-4">
-                            <label class="form-label">Contact Number <span class="text-danger">*</span></label>
-                            <input type="tel" class="form-control">
-                        </div>
-
-                        <div class="col-md-8">
-                            <label class="form-label">Residential Address</label>
-                            <input type="text" class="form-control">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="text" name="mother_mobile" class="form-control"
+                                placeholder="Enter mobile number">
                         </div>
 
                         <div class="col-md-4">
-                            <label class="form-label">City</label>
-                            <input type="text" class="form-control">
+                            <label class="form-label">Occupation</label>
+                            <input type="text" name="mother_occupation" class="form-control"
+                                placeholder="Enter occupation">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Annual Income</label>
+                            <input type="text" name="mother_income" class="form-control"
+                                placeholder="Enter annual income">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">PAN Number</label>
+                            <input type="text" name="mother_pan" class="form-control" placeholder="Enter PAN number">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Aadhaar Number</label>
+                            <input type="text" name="mother_aadhar" class="form-control"
+                                placeholder="Enter Aadhaar number">
                         </div>
 
                     </div>
                 </div>
             </div>
 
-
-            <!-- ================= Previous School Details ================= -->
-            <div class="card shadow-sm border p-4  rounded-3 mb-4">
+            <!-- ================= Address ================= -->
+            <div class="card shadow-sm border rounded-3 mb-4">
                 <div class="card-body p-4">
 
-                    <h5 class="fw-bold mb-4">Previous School Details</h5>
+                    <h5 class="fw-bold mb-4">Address Details</h5>
 
-                    <div class="row g-4">
-
-                        <div class="col-md-6">
-                            <label class="form-label">Previous School Name</label>
-                            <input type="text" class="form-control">
-                        </div>
-
-                        <div class="col-md-3">
-                            <label class="form-label">Last Studied Class</label>
-                            <input type="text" class="form-control">
-                        </div>
-
-                        <div class="col-md-3">
-                            <label class="form-label">Academic Year</label>
-                            <input type="text" class="form-control" placeholder="2024-25">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Transfer Certificate (TC)</label>
-                            <input type="file" class="form-control">
-                        </div>
-
+                    <div class="mb-3">
+                        <label class="form-label">Local Address</label>
+                        <textarea name="local_address" class="form-control" rows="2"
+                            placeholder="Enter local address"></textarea>
                     </div>
+
+                    <div>
+                        <label class="form-label">Permanent Address</label>
+                        <textarea name="permanent_address" class="form-control" rows="2"
+                            placeholder="Enter permanent address"></textarea>
+                    </div>
+
                 </div>
             </div>
-
 
             <!-- Submit -->
             <div class="text-center">
-                <button type="submit" class="btn btn-primary px-5 py-2">
+                <button class="btn btn-primary px-5 py-2" name="submit">
                     Submit Admission Form
                 </button>
             </div>
 
         </form>
+
     </div>
-
-
-
 
 
     <!-- Premium WhatsApp Floating Button -->
